@@ -1,0 +1,32 @@
+common:
+  # model-related
+  imgnet_pretrained: 0.0
+  num_state: 128
+  num_mid: 16
+  dropout1: 0.0
+  dropout2: 0.1
+  audio_pool: 'maxpool'
+  pretrained_path: ''
+
+  # loss-related
+  loss_pool: 'maxpool'
+  loss_names: ['loc', 'dis', 'div']
+  fg_nodes: 8
+  bg_nodes: 8
+  dis_weight: 0.1
+  div_weight: 0.1
+  div_mode: 'js'
+
+  test_batch_size: 20
+
+  # data-related
+  dataset: 'VGGSound'
+  base_path: ''
+  train_list: ''
+  testset: 'vggss' # choose between [vggss, flickr]
+  gt_path: ''
+  image_size: 224
+  sample_rate: 24000
+  audio_suffix: 'flac'
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
